@@ -9,15 +9,7 @@
 ## Can cache its inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
-        itsinverse <- NULL
-        set <- function(x) {
-                cache <<- x;
-                itsinverse <<- NULL;
-        }
-        get <- function() return(cache);
-        setinv <- function(inv) itsinverse <<- inv;
-        getinv <- function() return(itsinverse);
-        return(list(set = set, get = get, setinv = setinv, getinv = getinv))
+
 }
 
 ## Calculates the inverse of the special
@@ -25,12 +17,5 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
-        solveinverse <- mtx$getinv()
-        if(!is.null(solveinverse)) {
-                return(solveinverse)
-        }
-        data <- mtx$get()
-        solveinvserse <- solve(data, ...)
-        mtx$setinv(solveinverse)
-        return(solveinverse)
+
 }
